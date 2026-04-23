@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Joseph</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h2>Joseph</h2>
+
+  <!-- bouton menu mobile -->
+  <div class="menu-toggle" id="menu-toggle">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+  <nav id="nav">
+    <a href="#hero">Accueil</a>
+    <a href="#about">À propos</a>
+    <a href="#projects">Projets</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section id="hero" class="hero">
+  <h1>Salut, je suis Joseph 👋</h1>
+  <p>Étudiant en Software Engineering</p>
+  <a href="#projects"><button>Voir mes projets</button></a>
+</section>
+
+<section id="about" class="about">
+  <h2>À propos</h2>
+  <p>
+    Je développe des applications web simples avec HTML, CSS et JavaScript.
+  </p>
+</section>
+
+<section id="projects" class="projects">
+  <h2>Projets</h2>
+
+  <div class="cards">
+    <div class="card">
+      <h3>To-do List</h3>
+      <p>Application simple de gestion de tâches.</p>
+      <button>Voir</button>
+    </div>
+
+    <div class="card">
+      <h3>Site météo</h3>
+      <p>Application météo utilisant une API.</p>
+      <button>Voir</button>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <h2>Contact</h2>
+  <p>Email : josephbrayan2021@gmail.com</p>
+  <p>WhatsApp : +237 672 78 35 50</p>
+</section>
+
+<footer>
+  <p>© 2026 Joseph - Tous droits réservés</p>
+</footer>
+
+<!-- SCRIPT MENU MOBILE -->
+<!--document.getElementById("menu-toggle").innerText = "X";-->
+<script>
+  const toggle = document.getElementById("menu-toggle");
+  const nav = document.getElementById("nav");
+
+  toggle.addEventListener("click", () => {
+    nav.classList.toggle("active");
+  });
+</script>
+
+</body>
+</html>
