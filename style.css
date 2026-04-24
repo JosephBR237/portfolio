@@ -2,16 +2,18 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: 0.4s;
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: #222;
   background: #ffffff;
 }
 
 /* HEADER */
 header {
+  font-family: "Montserrat", sans-serif;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -22,6 +24,18 @@ header {
   border-bottom: 1px solid #eee;
 }
 
+header a{
+  text-decoration: none;
+}
+
+header a h2{
+  color: #4f46e5;
+}
+
+header a h2:hover{
+  color: black;
+  cursor: pointer;
+}
 /* NAV (PC) */
 nav {
   display: flex;
@@ -53,36 +67,26 @@ nav a:hover {
   transition: 0.3s;
 }
 
-/* ANIMATION → CROIX */
-.menu-toggle.active span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
-}
-
-.menu-toggle.active span:nth-child(2) {
-  opacity: 0;
-}
-
-.menu-toggle.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(6px, -6px);
-}
-
-/* HERO */
-.hero {
+/* home */
+.home {
   text-align: center;
-  padding: 60px 20px;
-  background: #f5f5f5;
+  padding: 120px 20px;
+  background: #d3baac;
 }
 
-.hero h1 {
+.home h1 {
+  font-family: "Montserrat", sans-serif;
   font-size: 32px;
   margin-bottom: 10px;
 }
 
-.hero p {
+.home p {
+  font-family: "Montserrat", sans-serif;
   margin-bottom: 20px;
 }
 
 button {
+  font-family: "Montserrat", sans-serif;
   background: #4f46e5;
   color: white;
   border: none;
@@ -96,18 +100,27 @@ button:hover {
 
 /* SECTIONS */
 .about,
-.projects,
+.project,
 .contact {
+  font-family: "Montserrat", sans-serif;
   padding: 40px 20px;
   text-align: center;
 }
 
+/*About*/
 .about p {
+  font-family: "Century Gothic";
+  line-height: 25px;
+  letter-spacing: 1px;
   max-width: 600px;
   margin: auto;
 }
 
-/* PROJECTS */
+.about{
+  background: #f5f5f5;
+}
+
+/* project */
 .cards {
   display: flex;
   flex-wrap: wrap;
@@ -115,13 +128,38 @@ button:hover {
   margin-top: 20px;
 }
 
+.cards h3{
+  font-family: "Century Gothic";
+}
+
+.card img{
+  max-width: 100%;
+}
 .card {
+  font-family: "Century Gothic";
   width: 250px;
   margin: 10px;
-  padding: 20px;
+  padding: 15px;
   background: white;
   box-shadow: 0 0 10px #ddd;
   border-radius: 8px;
+}
+
+a button{
+  background: #4f46e5;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/*Contact*/
+.contact p{
+  margin-top: 10px;
+}
+
+.contact h2{
+  margin-bottom: -10px;
 }
 
 /* FOOTER */
@@ -161,7 +199,7 @@ footer {
     flex-wrap: wrap;
   }
 
-  .hero h1 {
+  .home h1 {
     font-size: 22px;
   }
 

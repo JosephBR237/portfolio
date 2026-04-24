@@ -1,0 +1,189 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            margin: 0;
+        }
+
+        body {
+            font-family: "Montserrat", sans-serif;
+            background: #d3baac;
+            color: #222;
+        }
+
+        /* HEADER */
+        header {
+            font-family: "Montserrat", sans-serif;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background: #ffffff;
+            position: sticky;
+            top: 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        header a {
+            text-decoration: none;
+        }
+
+        header a h2 {
+            color: #4f46e5;
+        }
+
+        header a h2:hover {
+            color: black;
+            cursor: pointer;
+        }
+
+        .calculator {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 20%;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            margin-top: 8%;
+        }
+
+        input {
+            width: 90%;
+            height: 45px;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        button {
+            padding: 6px;
+            height: 45px;
+            width: 22%;
+            margin: 2px;
+            border: none;
+            background: #4f46e5;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        a button {
+            text-decoration: none;
+        }
+
+        button.clear {
+            width: 98%;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+
+        #result {
+            color: black;
+            margin-top: 15px;
+            font-weight: bold;
+            font-family: 'Century Gothic';
+        }
+
+        @media screen and (max-width: 600px) {
+            .calculator {
+                position: relative;
+                top: 150;
+                width: 80%;
+                max-width: 90%;
+            }
+
+            button {
+                padding: 5px;
+                width: 22%;
+                margin: 2px;
+            }
+
+            button.clear {
+                width: 96%;
+            }
+
+            input {
+                width: 96%;
+                margin-left: 6px;
+            }
+
+            footer {
+                display: none;
+            }
+        }
+
+        /* FOOTER */
+        footer {
+            position: relative;
+            text-align: center;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <h2>Joseph Brayan</h2>
+        </a>
+    </header>
+    <div class="calculator">
+        <h2>Calculator</h2>
+
+        <input type="number" id="num1" placeholder="Enter first number"><br>
+        <input type="number" id="num2" placeholder="Enter second number"><br>
+
+        <button onclick="add()">Add</button>
+        <button onclick="subtract()">Subtract</button>
+        <button onclick="multiply()">Multiply</button>
+        <button onclick="divide()">Divide</button>
+        <a href=""><button type="reset" class="clear">Clear</button></a>
+
+        <p id="result">Result: </p>
+    </div>
+    <br><br>
+    <footer>
+        <p>© 2026 Joseph - Tous droits réservés</p>
+    </footer>
+
+    <script>
+        function getNumbers() {
+            let n1 = parseFloat(document.getElementById("num1").value);
+            let n2 = parseFloat(document.getElementById("num2").value);
+            return [n1, n2];
+        }
+
+        function add() {
+            let [n1, n2] = getNumbers();
+            document.getElementById("result").innerText = "Result: " + (n1 + n2);
+        }
+
+        function subtract() {
+            let [n1, n2] = getNumbers();
+            document.getElementById("result").innerText = "Result: " + (n1 - n2);
+        }
+
+        function multiply() {
+            let [n1, n2] = getNumbers();
+            document.getElementById("result").innerText = "Result: " + (n1 * n2);
+        }
+
+        function divide() {
+            let [n1, n2] = getNumbers();
+            if (n2 == 0) {
+                document.getElementById("result").innerText = "Cannot divide by zero";
+            } else {
+                document.getElementById("result").innerText = "Result: " + (n1 / n2);
+            }
+        }
+    </script>
+</body>
+
+</html>
