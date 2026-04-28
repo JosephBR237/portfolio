@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: 0.4s;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background: #1a1a1a;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+}
+
+header {
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: #000000;
+  position: sticky;
+  top: 0;
+  border-bottom: 1px solid #eee;
+}
+
+header a {
+  text-decoration: none;
+}
+
+header a h2 {
+  color: #7772e0;
+  font-weight: normal;
+}
+
+header a h2:hover {
+  letter-spacing: 2px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  font-weight: bolder;
+}
+
+nav {
+  display: flex;
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #e4e4e4;
+  font-size: 14px;
+}
+
+nav a:hover {
+  letter-spacing: 5%;
+  color: #7772e0;
+  font-weight: bolder;
+}
+
+
+.video-player-container {
+  margin-top: 2%;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-bottom: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.video-frame {
+  border-radius: 10px;
+  aspect-ratio: 16 / 9;
+  flex: 2;
+}
+
+.video-frame iframe {
+  border: solid 2px #e4e4e4;
+  border-radius: 10px;
+  aspect-ratio: 16 / 9;
+}
+
+.video-details {
+  flex: 1;
+}
+
+.description-box h3 {
+  margin-top: 20px;
+  font-size: 1.1em;
+}
+
+
+.block{
+	background-color: rgb(0, 0, 0);
+	margin-bottom: 55px;
+}
+.block h2{
+	color: rgb(225, 225, 225);
+	border-bottom: 2px solid rgb(225, 225, 225);
+	border-bottom: dotted;
+}
+.block .list{
+	background-color: rgb(0, 0, 0);
+	display:flex;
+	overflow-x: auto;
+} 
+.block .item{
+	text-decoration: none;
+	background-color: rgb(0, 0, 0);
+	padding-left: 5px;
+	color: rgb(225, 225, 225);
+}
+
+.block .item p{
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-left: 2%;
+  max-width: 100%;
+	background-color: rgb(0, 0, 0);
+}
+
+.block .item p:hover{
+	text-decoration: underline;
+  cursor: pointer;
+}
+
+.block .item img:hover{
+  cursor: pointer;
+	transition: 0.25s;
+	transform:scale(1.05);
+}
+.block .item img{
+  border: solid 1px #ffffff;
+	border-radius: 5px;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: -10px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: rgb(0, 0, 0);
+}
+
+@media (max-width: 600px) {
+  .video-player-container {
+    flex-direction: column;
+  }
+
+  .description-box {
+    display: none;
+  }
+}

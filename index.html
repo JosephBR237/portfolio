@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Joseph</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+
+  <header>
+    <a href="index.html">
+      <h2>Joseph Brayan</h2>
+    </a>
+
+
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <nav id="nav">
+      <a href="#home">Home</a>
+      <a href="#about">Abouts</a>
+      <a href="#project">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+  <hr>
+
+  <section id="home" class="home">
+    <h1>Hello, my name is Joseph 👋</h1>
+    <p>A Software Engineering Student</p>
+    <a href="#project"><button>See my projects</button></a>
+  </section>
+  <hr>
+  <section id="project" class="project">
+    <h2>My Projets</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="./img/calc.png" alt="">
+        <h3>JavaScript Calculator</h3>
+        <br>
+        <p>A calculator that I have program using HTML, CSS & JavaScript</p>
+        <br>
+        <a href="calculator.html"><button>See</button></a>
+      </div>
+
+      <div class="card">
+        <img src="img/e-l.jpg" alt="">
+        <h3>E-learning Platform</h3>
+        <br>
+        <p>A website that allows the user to access online tutorials on specific course.</p>
+        <br>
+        <a href="e-learning.html"><button>See</button></a>
+      </div>
+    </div>
+  </section>
+  <hr>
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <br>
+    <div class="info">
+      <img src="./img/profile-2.jpg" alt="my picture">
+      <p>
+        My name is <b>MBOGNING FOPA JOSEPH BRAYAN</b>, I am currently a First Year <i><b>Software Engineering</b></i> student at the Group
+        <b>ISG-ISSAD</b>.
+        <br><br>
+        Throughout my academic training, I acquired fundamental knowledge in <u><i>Web Development</i></u>, <u><i>Database Managment</i></u> and <u><i>Software Development</i></u>.
+        Motivated, rigorous, and passionate about technology, I am highly motivated to gain practical experience through Internship or Job.
+        <br><br>
+        
+        I am a motivated, disciplined, and fast-learning individual, capable of working both independently and in a team environment.
+        I am eager to develop my professional skills, expand my knowledge, and contribute positively to the Society.
+      </p>
+    </div>
+  </section>
+  <hr>
+  <section id="contact" class="contact">
+    <h2><center>Contact Us</center></h2>
+    <br>
+    <p>Email : josephbrayan2021@gmail.com</p>
+    <p>WhatsApp : +237 672 78 35 50</p>
+  </section>
+  <hr>
+  <footer>
+    <p>© 2026 Joseph - All Right Reserve</p>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById("menu-toggle");
+    const nav = document.getElementById("nav");
+
+    toggle.addEventListener("click", () => {
+      nav.classList.toggle("active");
+    });
+  </script>
+
+</body>
+
+</html>
