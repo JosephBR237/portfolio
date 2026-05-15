@@ -6,89 +6,109 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio - Joseph</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
+  <!--header-->
   <header>
-    <a href="index.html"><h2>Joseph Brayan</h2></a>
 
+    <a href="index.html">
+      <h2>Joseph</h2>
+    </a>
 
-    <div class="menu-toggle" id="menu-toggle">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-
+    <!--nav bar-->
     <nav id="nav">
-      <a href="#home">Accueil</a>
-      <a href="#about">À propos</a>
-      <a href="#project">Projets</a>
+      <a href="#about">Abouts</a>
+      <a href="#project">Projects</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
-  <hr>
 
-  <section id="home" class="home">
-    <h1>Hello, my name is Joseph 👋</h1>
-    <p>A Software Engineering Student</p>
-    <a href="#project"><button>See my projects</button></a>
+  <!--hero-->
+  <section class="hero">
+    <h1>Hello, my name is Joseph Brayan | Software Engineering Student</h1>
+    <p style="line-height: 150%;">
+      Computer science student with a passion for web development. I create <br> modern and interactive websites.
+      I am currently seeking an internship to gain practical experience and improve my skills.
+    </p>
+    <p>HTML • CSS • JavaScript • C</p>
+    <a href="#project"><button class="p">See my projects</button></a>
+    <a href="#contact"><button class="c">Contact Me</button></a>
   </section>
-  <hr>
-  <section id="project" class="project">
-    <h2>My Projets</h2>
-    <div class="cards">
-      <div class="card">
-        <img src="logo.png" alt="">
-        <h3>JavaScript Calculator</h3>
-        <br>
-        <p>A calculator that I have program using HTML, CSS & JavaScript</p>
-        <br>
-        <a href="calculator.html"><button>Voir</button></a>
-      </div>
 
-      <div class="card">
-        <img src="logo.png" alt="">
-        <h3>E-learning Platform</h3>
+  <!--about-->
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <br>
+    <div class="info">
+      <img src="profile.jpg" alt="my picture">
+      <p>
+        <b>First-Year Software Engineering Student</b>
         <br>
-        <p>A website that allows the user to access online tutorials on specific course.</p>
+        <b>Passionate about Web Development</b>
         <br>
-        <a href="e-learning.html"><button>Voir</button></a>
+        <b>Looking for an internship</b>
+        <br>
+        <br>
+        <span>
+        I am a first-year Software Engineering student passionate about web development and technology. 
+        I enjoy creating modern, responsive, and user-friendly websites while continuously improving my technical skills. 
+        I am currently looking for an internship opportunity where I can gain practical experience, learn from professionals,
+        and contribute to real-world projects.
+        </span>
+      </p>
+    </div>
+  </section>
+
+  <!--project-->
+  <section id="project" class="project">
+    <h2>My Projects</h2>
+
+    <!--card-->
+    <div class="cards">
+      <div class="card-info" id="calculator">
+        <h4>Web Calculator</h4>
+        <br>
+        <p style="color: rgb(156, 163, 175);">A Web Calculator with basic functions.</p>
+        <br>
+        <p style="color: rgb(107, 114, 128);">HTML, CSS, JavaScript</p>
+        <br>
+        <a href="calculator.html" style="color: rgb(96 ,165 ,250, 1);">See Projects</a>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="card-info" id="e-learning">
+        <h4>E-learning Plateforme</h4>
+        <br>
+        <p style="color: rgb(156, 163, 175);">E-learning platform with educational videos.</p>
+        <br>
+        <p style="color: rgb(107, 114, 128);">HTML, CSS, JavaScript</p>
+        <br>
+        <a href="e-learning.html" style="color: rgb(96 ,165 ,250, 1);">See Projects</a>
       </div>
     </div>
   </section>
-  <hr>
-  <section id="about" class="about">
-    <h2>About Us</h2>
-    <br>
-    <p>
-      My name is MBOGNING FOPA JOSEPH BRAYAN, I am currently a First Year Software Engineering student at the Group
-      ISG-ISSAD.
-      Throughout my academic training, I acquired fundamental knowledge in Web Design and some programming concept.
-      This portfolio will help me to show my skills an exercise my self so as to keep a track on my progression.
-    </p>
-  </section>
-  <hr>
+
+  <!--contact-->
   <section id="contact" class="contact">
-    <h2>Contact Us</h2>
+    <h2>
+      <center>Contact Us</center>
+    </h2>
     <br>
     <p>Email : josephbrayan2021@gmail.com</p>
     <p>WhatsApp : +237 672 78 35 50</p>
   </section>
-  <hr>
+
+  <!--footer-->
   <footer>
-    <p>© 2026 Joseph - Tous droits réservés</p>
+    <p>© 2026 Joseph - All Right Reserve</p>
   </footer>
-
-  <!-- SCRIPT MENU MOBILE -->
-  <script>
-    const toggle = document.getElementById("menu-toggle");
-    const nav = document.getElementById("nav");
-
-    toggle.addEventListener("click", () => {
-      nav.classList.toggle("active");
-    });
-  </script>
 
 </body>
 
